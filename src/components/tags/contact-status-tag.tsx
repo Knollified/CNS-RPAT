@@ -10,11 +10,9 @@ import { Tag, TagProps } from "antd";
 
 import { ContactStatus } from "@/graphql/schema.types";
 
-type Props = {
-  status: ContactStatus;
-};
-
-export const ContactStatusTag = ({ status }: Props) => {
+export const ContactStatusTag: React.FC<{ status: ContactStatus }> = ({
+  status,
+}) => {
   let icon: React.ReactNode = null;
   let color: TagProps["color"] = undefined;
 
